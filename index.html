@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desserts - Product Listing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <main>
+            <h1>Desserts</h1>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Cart Toggle Button -->
+    <button class="cart-toggle" id="cartToggle">
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+    </button>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2 class="cart-title">Your Cart (<span id="cartItemCount">0</span>)</h2>
+            <button class="close-cart" id="closeCart">×</button>
+        </div>
+        <div class="cart-content" id="cartContent">
+            <div class="cart-empty" id="cartEmpty">
+                <div class="cart-empty-icon">🛒</div>
+                <p>Your added items will appear here</p>
+            </div>
+        </div>
+        <div class="cart-total" id="cartTotal" style="display: none;">
+            <div class="total-amount">$<span id="totalAmount">0.00</span></div>
+            <button class="confirm-order-btn" id="confirmOrderBtn">Confirm Order</button>
+        </div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="confirmation-modal">
+            <div class="success-icon">✓</div>
+            <h2 class="modal-title">Order Confirmed</h2>
+            <p class="modal-subtitle">We hope you enjoy your food!</p>
+            <div class="order-summary" id="orderSummary">
+                <!-- Order items will be displayed here -->
+            </div>
+            <div class="order-total">
+                <span>Order Total</span>
+                <span>$<span id="modalTotalAmount">0.00</span></span>
+            </div>
+            <button class="new-order-btn" id="newOrderBtn">Start New Order</button>
+        </div>
+    </div>
+
+    <!-- Quantity Input Modal -->
+    <div class="quantity-input" id="quantityInput">
+        <h3 id="quantityProductName"></h3>
+        <div class="quantity-controls">
+            <button class="quantity-btn" id="decreaseQty">-</button>
+            <span class="quantity" id="currentQuantity">2</span>
+            <button class="quantity-btn" id="increaseQty">+</button>
+        </div>
+        <div class="quantity-actions">
+            <button class="cancel-btn" id="cancelQuantity">Cancel</button>
+            <button class="add-to-cart-btn" id="addToCartConfirm">
+                🛒 Add to Cart
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

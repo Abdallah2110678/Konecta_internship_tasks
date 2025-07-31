@@ -1,1 +1,0 @@
-# Konecta_internship_tasks
